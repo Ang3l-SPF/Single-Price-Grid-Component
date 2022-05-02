@@ -1,0 +1,142 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --Cyan: hsl(179, 62%, 43%);
+    --Bright-Yellow: hsl(71, 73%, 54%);
+    --Light-Gray: hsl(204, 43%, 93%);
+    --Grayish-Blue: hsl(218, 22%, 67%);
+}
+
+body{
+    background-color: var(--Light-Gray);
+    font-family: 'Karla', sans-serif;
+    font-size: 16px;
+}
+
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.card{
+    width: 320px;
+    box-shadow: 0 5px 5px 5px rgba(100, 97, 97, 0.2);
+    border-radius: .3rem;
+}
+.container{
+    padding: 1.8rem; 
+}
+
+.community{
+    background-color: #fff;
+    border-radius: .3rem .3rem 0 0 ;
+}
+
+.subscription{
+    background-color: var(--Cyan);
+}
+
+.whyUs{
+    background-color: hsla(179 62% 43% / 0.7);  
+    border-radius: 0 0 .3rem .3rem  ;
+}
+
+.title{
+    margin-bottom: 1rem;
+    color: var(--Cyan);
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.description{
+    margin-bottom: 1rem;
+    color: var(--Bright-Yellow);
+    font-weight: 700;
+    font-size: .9rem;
+}
+
+.text{
+    color: var(--Grayish-Blue);
+    font-size: .8rem;
+    line-height: 1.5;
+}
+
+.subtitle,
+.price--fz{
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--Light-Gray);
+}
+
+.price{
+    margin-bottom: .3rem;
+    color: var(--Grayish-Blue);
+}
+
+.subscription p:nth-last-child(2){
+    margin-bottom: 1rem;
+    color: var(--Light-Gray);
+    font-size: .9rem;
+}
+
+.price--fz{
+    margin-right: .2em;
+    font-size: 2rem;
+    vertical-align: middle;
+}
+
+.btn-sign{
+    background-color: var(--Bright-Yellow);
+    display: block;
+    padding: .8rem ;
+    border-radius: .3rem;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+}
+
+.list{
+    list-style-type: none;
+    color: var(--Light-Gray);
+}
+
+@media screen and (min-width: 800px) {
+    .card{
+        width: 600px;
+        display: grid;
+        grid-template-columns: repeat(2, 2fr);
+        grid-template-rows: repeat(2, auto);
+    }
+
+    .community{
+        grid-column: span 2;
+    }
+
+    .community p:nth-child(3){
+        width: 450px;
+    }
+
+    .subscription{
+        display: flex;
+        flex-direction: column; 
+        border-bottom-left-radius: .3rem;
+    }
+
+    .whyUs{
+        border-radius: 0 0 .3rem 0;
+    }
+
+    .title{
+        font-size: 1.5rem;
+    }
+
+    .btn-sign{
+        margin-top: auto;
+    }
+}
